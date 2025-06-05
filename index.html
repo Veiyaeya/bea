@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #A3E4D7, #D4EFDF);
+            color: #2D6A4F;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+        }
+
+        .header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .stat-box {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            width: 48%;
+            height: 200px; /* Corrected '200dp' to '200px' */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .stat-box h2 {
+            font-size: 36px;
+            margin-bottom: 5px;
+        }
+
+        .stat-box p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .tasks {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+        .tasks-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .tasks-header h3 {
+            font-size: 18px;
+        }
+
+        .tasks-header a {
+            color: #2D6A4F; /* Updated to match text color for consistency */
+            text-decoration: none;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .task-item {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+            min-height: 60px; /* Ensure consistent minimum height */
+        }
+
+        .task-item img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .task-info {
+            flex-grow: 1;
+        }
+
+        .task-info h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .task-info p {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 10px 0;
+            position: sticky;
+            bottom: 0;
+        }
+
+        .navbar img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Hello, User!<br>Welcome to Washette Laundry</h1>
+        <img src="https://via.placeholder.com/40" alt="Profile">
+    </div>
+
+    <div class="stats">
+        <div class="stat-box">
+            <h2>32</h2>
+            <p>Recent Transactions</p>
+        </div>
+        <div class="stat-box">
+            <h2>24</h2>
+            <p>Pending</p>
+        </div>
+    </div>
+
+    <div class="tasks">
+        <div class="tasks-header">
+            <h3>Recent Activity</h3>
+            <a href="#">View all</a>
+        </div>
+        <div class="task-item">
+            <img src="https://via.placeholder.com/30/00FF00" alt="Icon">
+            <div class="task-info">
+                <h4>Order#123 - Laundry service</h4>
+                <p>Today</p>
+            </div>
+        </div>
+        <div class="task-item">
+            <img src="https://via.placeholder.com/30/FF0000" alt="Icon">
+            <div class="task-info">
+                <h4>Order#124 - Dry cleaning</h4>
+                <p>Today</p>
+            </div>
+        </div>
+        <div class="task-item">
+            <img src="https://via.placeholder.com/30/FFFF00" alt="Icon">
+            <div class="task-info">
+                <h4>Order#125 - Laundry service</h4>
+                <p>Today</p>
+            </div>
+        </div>
+        <div class="task-item">
+            <img src="https://via.placeholder.com/30/74B3A2" alt="Icon">
+            <div class="task-info">
+                <h4>Order#126 - Wash & Fold</h4>
+                <p>Yesterday</p>
+            </div>
+        </div>
+        <div class="task-item">
+            <img src="https://via.placeholder.com/30/A3E4D7" alt="Icon">
+            <div class="task-info">
+                <h4>Order#127 - Dry cleaning</h4>
+                <p>Yesterday</p>
+            </div>
+        </div>
+        <div class="task-item">
+            <img src="https://via.placeholder.com/30/D4EFDF" alt="Icon">
+            <div class="task-info">
+                <h4>Order#128 - Laundry service</h4>
+                <p>Yesterday</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <img src="https://via.placeholder.com/30" alt="Home">
+        <img src="https://via.placeholder.com/30" alt="Tasks">
+        <img src="https://via.placeholder.com/30" alt="Messages">
+    </div>
+</body>
+</html>
