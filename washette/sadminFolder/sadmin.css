@@ -1,0 +1,307 @@
+/* ========== BODY & BACKGROUND ========== */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Arimo", sans-serif;
+  background-image: linear-gradient(
+    90.5deg,
+    rgba(112, 181, 176, 1) 1.9%,
+    rgba(220, 244, 241, 1) 87.7%
+  );
+}
+.main-content-washette {
+  flex: 1 0 auto;
+}
+
+/* ========== CARD STYLES ========== */
+.card {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1.5px solid #bfe6e3;
+  background: #e1f3f2;
+  box-shadow: 0 2px 8px rgba(57, 92, 88, 0.07);
+  border-radius: 18px;
+  transition: box-shadow 0.18s, background 0.18s, transform 0.18s;
+  color: #395c58;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  margin-left: 15px; /* Explicitly equal margins */
+  margin-right: 15px;
+}
+.card:hover {
+  box-shadow: 0 4px 12px rgba(57, 92, 88, 0.1);
+  background: #e6f7f6;
+  transform: scale(1.008);
+}
+.card.no-hover-effect:hover {
+  box-shadow: 0 2px 8px rgba(57, 92, 88, 0.07);
+  background: #e1f3f2;
+  transform: none;
+}
+
+/* ========== CARD CONTENT ========== */
+.card-title {
+  font-weight: 700;
+  color: #395c58;
+  font-size: 1rem;
+}
+.card-text {
+  color: #7a9c98;
+  font-size: 0.75rem;
+}
+.card-body {
+  padding: 0.8rem 1rem;
+}
+.card-icon {
+  font-size: 2rem !important;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-arrow {
+  font-size: 1.5rem;
+  color: #395c58;
+}
+
+/* ========== PAGE SETTINGS AND HOME CARDS ========== */
+#pageSettingsCard {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 18px;
+  padding: 0 5px;
+}
+
+#homeCard {
+  width: 100%;  
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 18px;
+  padding: 0 5px;
+  background: #e1f3f2;
+}
+
+#pausePageCard{
+  width: 200px;  
+  height: 900px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 2px;
+  border-radius: 18px;
+  padding: 0 5px;
+  background: #e1f3f2;
+}
+/* ========== FILTER BUTTON ========== */
+.filter-btn {
+  background: #395c58 !important;
+  color: #fff !important;
+  border: none !important;
+  font-size: 0.85rem;
+  padding: 2px 12px 2px 8px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+  transition: background 0.15s, box-shadow 0.15s;
+  box-shadow: 0 1px 3px rgba(57, 92, 88, 0.04);
+}
+.filter-btn .fa-filter {
+  font-size: 0.8rem;
+}
+.filter-btn:hover,
+.filter-btn:focus {
+  background: #2c4744 !important;
+  box-shadow: 0 2px 10px rgba(57, 92, 88, 0.1);
+}
+
+/* ========== MODAL STYLES ========== */
+.modal-content {
+  background-color: rgba(217, 242, 239, 0.6);
+  border-radius: 16px;
+  border: 2px solid rgba(191, 230, 227, 0.7);
+  box-shadow: 0 6px 24px 0 rgba(31, 38, 135, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.modal-header,
+.modal-footer {
+  border: none;
+  padding: 0.8rem;
+}
+.btn-close {
+  filter: grayscale(1) brightness(0.7);
+  opacity: 0.7;
+  transition: opacity 0.15s;
+}
+.btn-close:hover,
+.btn-close:focus,
+.btn-close:active {
+  opacity: 1;
+}
+.modal-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #395c58;
+}
+.modal-body {
+  padding: 0.6rem;
+}
+#applyFilterBtn.btn {
+  border-radius: 14px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 6px rgba(57, 92, 88, 0.07);
+  padding: 0.5rem 1.2rem;
+}
+#applyFilterBtn.btn:hover,
+#applyFilterBtn.btn:focus {
+  background: #2e4844 !important;
+  box-shadow: 0 3px 12px rgba(57, 92, 88, 0.12);
+}
+
+/* ========== CUSTOM CHECKBOX ========== */
+.status-checkbox {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+.form-check {
+  position: relative;
+  padding-left: 1.8em;
+  margin-bottom: 0.6em;
+  min-height: 1.3em;
+  display: flex;
+  align-items: center;
+}
+.form-check-label {
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #395c58;
+}
+.form-check .custom-checkmark {
+  position: absolute;
+  left: 0.2em;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1em;
+  width: 1em;
+  background-color: #d9f2ef;
+  border: 1.5px solid #395c58;
+  border-radius: 0.2em;
+  pointer-events: none;
+}
+.form-check-input:checked ~ .custom-checkmark {
+  background-color: #395c58;
+  border-color: #395c58;
+}
+.form-check .custom-checkmark:after {
+  left: 0.3em;
+  top: 0.1em;
+  width: 0.25em;
+  height: 0.5em;
+  border: solid #fff;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+  content: "";
+  position: absolute;
+  display: none;
+}
+.form-check-input:checked ~ .custom-checkmark:after {
+  display: block;
+}
+
+/* ========== MODAL BLUR EFFECT ========== */
+.modal-backdrop {
+  background: rgba(40, 60, 60, 0.3) !important;
+  opacity: 1 !important;
+}
+.modal-content {
+  z-index: 1061 !important;
+}
+
+/* ========== TABLE STYLES ========== */
+.transaction-table {
+  width: 100%;
+  margin-bottom: 0;
+  background: none;
+  border-radius: 0 0 10px 10px;
+  color: #395c58;
+  font-size: 0.85rem;
+}
+.transaction-table th {
+  color: #395c58;
+  font-weight: 600;
+  border-bottom: 1.5px solid #a7c7e7;
+}
+.transaction-table th,
+.transaction-table td {
+  padding: 0.6rem 0.6rem;
+  text-align: left;
+  border: none;
+  font-size: 0.85rem;
+}
+.transaction-table th:first-child,
+.transaction-table td:first-child {
+  padding-left: 1rem;
+}
+.transaction-table th:last-child,
+.transaction-table td:last-child {
+  padding-right: 1rem;
+}
+.transaction-table tbody tr {
+  background-color: rgba(217, 242, 239, 0.5);
+  transition: background 0.18s, transform 0.2s;
+}
+.transaction-table tbody tr:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+.transaction-table tbody tr:first-child td:first-child,
+.transaction-table tbody tr:last-child td:first-child,
+.transaction-table tbody tr:hover td:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.transaction-table tbody tr:first-child td:last-child,
+.transaction-table tbody tr:last-child td:last-child,
+.transaction-table tbody tr:hover td:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.table-responsive {
+  overflow-x: auto;
+}
+
+/* ========== FOOTER ========== */
+.footer-washette {
+  flex-shrink: 0;
+  width: 100%;
+  text-align: center;
+  background: none;
+  padding: 0.5rem 0;
+  font-size: 0.8rem;
+  color: #7a9c98;
+}
